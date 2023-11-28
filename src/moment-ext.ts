@@ -12,6 +12,7 @@ Ambiguously-TIMED moments are assumed to be ambiguously-zoned by nature.
 declare module 'moment' {
   interface Moment {
     hasTime(): boolean
+	  // tslint:disable-next-line:no-unnecessary-qualifier
     time(): moment.Duration
     stripZone()
     stripTime()
