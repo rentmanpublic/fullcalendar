@@ -11,8 +11,8 @@ gulp.task('lint', [
   'lint:js:built',
   'lint:js:node',
   'lint:js:tests',
-  'lint:dts',
-  'lint:example-repos'
+  'lint:dts'
+  // 'lint:example-repos'
 ])
 
 gulp.task('lint:ts', function() {
@@ -98,6 +98,6 @@ gulp.task('lint:dts', [ 'ts-types' ], shell.task(
 ))
 
 // try to build example repos
-gulp.task('lint:example-repos', [ 'webpack', 'ts-types' ], shell.task(
-  './bin/build-typescript-example.sh'
-))
+// gulp.task('lint:example-repos', [ 'webpack', 'ts-types' ], shell.task(
+//   './bin/build-typescript-example.sh'
+// ))

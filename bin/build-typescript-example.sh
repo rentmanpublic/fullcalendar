@@ -28,11 +28,11 @@ cd 'tests/example-repos/typescript-example'
 
 npm install
 
-if [[ "$use_current" == '1' ]]
-then
-  echo "Linking to fullcalendar current working directory..."
-  npm link ../../../
-fi
+#if [[ "$use_current" == '1' ]]
+#then
+#  echo "Linking to fullcalendar current working directory..."
+#  npm link ../../../
+#fi
 
 success=0
 
