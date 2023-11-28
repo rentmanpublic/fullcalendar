@@ -2509,18 +2509,33 @@ declare module 'fullcalendar/src/exports' {
 	export { default as MonthView } from 'fullcalendar/MonthView';
 	export { default as ListView } from 'fullcalendar/ListView';
 }
+declare module 'fullcalendar/src/models/event-source/config' {
+	export {};
+}
 declare module 'fullcalendar/BootstrapTheme' {
 	import Theme from 'fullcalendar/Theme';
 	export class Default extends Theme {
 	}
 	export default Default;
 }
+declare module 'fullcalendar/src/theme/config' {
+	export {};
+}
+declare module 'fullcalendar/src/basic/config' {
+	export {};
+}
+declare module 'fullcalendar/src/agenda/config' {
+	export {};
+}
+declare module 'fullcalendar/src/list/config' {
+	export {};
+}
 declare module 'fullcalendar/src/types/jquery-hooks' {
 	import * as moment from 'moment';
 	import Calendar from 'fullcalendar/Calendar';
 	import View from 'fullcalendar/View';
 	import EventSource from 'fullcalendar/EventSource';
-	import { RangeInput, MomentInput, OptionsInput, EventObjectInput, EventSourceInput } from 'fullcalendar/src/types/input-types'; global  {
+	import { RangeInput, MomentInput, OptionsInput, EventObjectInput, EventSourceInput } from 'fullcalendar/src/types/input-types'; global {
 	    interface JQueryStatic {
 	        fullCalendar: object;
 	    }
@@ -2604,6 +2619,9 @@ declare module 'fullcalendar/plugins/gcal/GcalEventSource' {
 	    applyMiscProps(rawProps: any): void;
 	}
 	export default Default;
+}
+declare module 'fullcalendar/plugins/gcal/main' {
+	export {};
 }
 declare module 'fullcalendar' {
 	import main = require('fullcalendar/src/main');

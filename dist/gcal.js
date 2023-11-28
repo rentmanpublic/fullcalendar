@@ -1,5 +1,5 @@
 /*!
- * FullCalendar v3.8.2
+ * Rentman FullCalendar Fork v3.8.3
  * Docs & License: https://fullcalendar.io/
  * (c) 2018 Adam Shaw
  */
@@ -136,10 +136,10 @@ var GcalEventSource = /** @class */ (function (_super) {
     }
     GcalEventSource.parse = function (rawInput, calendar) {
         var rawProps;
-        if (typeof rawInput === 'object') {
+        if (typeof rawInput === 'object') { // long form. might fail in applyManualStandardProps
             rawProps = rawInput;
         }
-        else if (typeof rawInput === 'string') {
+        else if (typeof rawInput === 'string') { // short form
             rawProps = { url: rawInput }; // url will be parsed with parseGoogleCalendarId
         }
         if (rawProps) {
@@ -153,7 +153,7 @@ var GcalEventSource = /** @class */ (function (_super) {
         var requestParams = this.buildRequestParams(start, end, timezone);
         var ajaxSettings = this.ajaxSettings || {};
         var onSuccess = ajaxSettings.success;
-        if (!requestParams) {
+        if (!requestParams) { // could have failed
             return fullcalendar_1.Promise.reject();
         }
         this.calendar.pushLoading();
